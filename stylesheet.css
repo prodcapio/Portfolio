@@ -228,14 +228,7 @@ footer {
     }
 }
 
-/* cursor trail effect */
 
-.circle {
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background-color: black;
-}
 
 /* Medium Screens (Tablets) */
 @media (min-width: 768px) {
