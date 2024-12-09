@@ -39,7 +39,7 @@ header {
 }
 
 /* Header navigation - space items and logo evenly */
-.header-nav {
+.header__nav {
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -51,7 +51,7 @@ header {
 }
 
 /* Navigation Links */
-.nav-links {
+.nav__links {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -59,7 +59,7 @@ header {
     justify-content: center;
 }
 
-.nav-links a {
+.nav__links a {
     text-decoration: none;
     font-size: 1rem;
     color: #E8DAD1;
@@ -67,21 +67,21 @@ header {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav__links a:hover {
     color: #FC573B;
 }
 
 /* Left and Right Links */
-.nav-links.left-links {
+.nav__links.nav__links--left {
     justify-content: flex-end; /* Align left links to the left */
 }
 
-.nav-links.right-links {
+.nav__links.nav__links--right {
     justify-content: flex-start; /* Align right links to the right */
 }
 
 /* Logo Container */
-.logo-container {
+.header__logo {
     flex:  0 0 auto;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ header {
     padding: 0 20px;
 }
 
-.logo-circle {
+.logo__circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,22 +102,34 @@ header {
     transition: transform 0.5s ease;
 }
 
-.logo-circle:hover {
-    transform: rotate(360deg);
+.logo__circle:hover {
+    animation: pulse 1s infinite;
 }
 
-.logo-circle img {
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #FC573B;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px #FC573B;
+    }
+}
+
+
+.logo__circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
 }
 
-/* Sections */
+/* Sections spacer */
 section {
     padding: 40px 15px;
     margin: 30px 0;
-    text-align: center;
+    
 }
 
 /* Hero Section */
@@ -127,7 +139,7 @@ section {
     background-color: #1D1D1F;
 }
 
-.hero-image-wrapper {
+.hero__image-wrapper {
     position: relative;
     width: 80%;
     margin: 0 auto;
@@ -139,9 +151,10 @@ section {
     opacity: 70%;
     display: block;
     align-content: center;
+    border-radius: 20px;
 }
 
-.hero-content {
+.hero__content {
     position: absolute;
     bottom: 50px;
     text-align: center;
@@ -159,44 +172,48 @@ section {
 
 /* Projects Section */
 .projects {
+    background-color: #E8DAD1;
     padding: 60px 15px;
     text-align: center;
+    border-radius: 30px 30px 0 0;
 }
 
-.project-grid {
+.projects__grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.project-item {
-    background: #AAAAAA;
+.project__item {
+    background: #172A39;
+    color: #E8DAD1;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-item:hover {
-    transform: translateY(-5px);
+.project__item:hover {
+    transform: translateY(-10px);
+    transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.read-more {
+.project__button {
     padding: 8px 12px;
     background: #000000;
-    color: #F3F3F3;
+    color: #E8DAD1;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
 
-.read-more:hover {
+.project__button:hover {
     background: #C6C6C6;
     color: #000000;
 }
 
-/* Professional Properties Section */
+/* Professionelle egenskaber afsnit */
 .properties ul {
     list-style: none;
     padding: 0;
@@ -218,26 +235,29 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Media Queries */
 
+
+/* Media Queries */
 
 
 /* Medium Screens (Tablets) */
 @media (min-width: 768px) {
     .nav-links {
-        flex-direction: row; /* Horizontal navigation for tablets */
+        flex-direction: row; 
         gap: 20px;
     }
 
-    .project-grid {
-        flex-direction: row; /* Side-by-side projects for tablets */
+    /* Side-by-side - Two projects per row for tablets */
+
+    .projects__grid {
+        flex-direction: row; 
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
     }
 
-    .project-item {
-        width: 45%; /* Two projects per row */
+    .project__item {
+        width: 45%; 
     }
 
 
@@ -245,7 +265,7 @@ footer {
 
 /* Large Screens (Desktop) */
 @media (min-width: 1024px) {
-    .project-item {
+    .project__item {
         width: 30%; /* Three projects per row for desktop */
     }
 
@@ -263,6 +283,10 @@ footer {
 
     h2 {
         font-size: 2.8rem;
+        margin-left: 60px;
+        margin-bottom: 30px;
+        text-align: left;
+        color: #1D1D1F;
     }
 
     h3 {
