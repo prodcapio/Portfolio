@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects - Casper's Portfolio">
+    <meta name="author" content="Casper">
+    <title>Projects - Casper's Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100&family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <!-- Left-aligned links -->
+            <ul class="nav-links left-links">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="projekter.html">Projekter</a></li>
+            </ul>
+            <!-- Logo Container -->
+            <div class="logo-container">
+                <div class="logo-circle">Casper</div>
+            </div>
+            <!-- Right-aligned links (for desktop) -->
+            <ul class="nav-links right-links">
+                <li><a href="ommig.html">Om mig</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <!-- Burger Menu for mobile -->
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Projects Page Hero Section -->
+        <section class="hero">
+            <h1>Om mig</h1>
+            <p>Explore my work and creative journey.</p>
+        </section>
+
+        
+    </main>
+
+    <!-- Overlay Modal -->
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <span class="close">&times;</span>
+            <div id="project-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Casper. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Overlay functionality
+        const overlay = document.getElementById('overlay');
+        const projectDetails = document.getElementById('project-details');
+        const closeOverlay = document.querySelector('.close');
+
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const projectId = e.target.dataset.project;
+                projectDetails.innerHTML = `<h3>Project ${projectId}</h3><p>More details about Project ${projectId} go here. This is where you can describe the project's goals, process, and results.</p>`;
+                overlay.classList.remove('hidden');
+            });
+        });
+
+        closeOverlay.addEventListener('click', () => {
+            overlay.classList.add('hidden');
+        });
+    </script>
+
+<script>
+    // Toggle Burger Menu
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

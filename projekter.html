@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Casper's Portfolio">
+    <meta name="description" content="Projects - Casper's Portfolio">
     <meta name="author" content="Casper">
-    <title>Casper's Portfolio</title>
+    <title>Projects - Casper's Portfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100&family=Oswald:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
@@ -37,11 +37,13 @@
     </header>
 
     <main>
+        <!-- Projects Page Hero Section -->
         <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my creative journey, professional skills, and latest projects.</p>
+            <h1>My Projects</h1>
+            <p>Explore my work and creative journey.</p>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="projects">
             <h2>Featured Projects</h2>
             <div class="project-grid">
@@ -69,38 +71,29 @@
                     <p>Short description of Project 4.</p>
                     <button class="read-more" data-project="4">Read More</button>
                 </div>
+                <div class="project-item">
+                    <img src="project5.jpg" alt="Project 5">
+                    <h3>Project 5</h3>
+                    <p>Short description of Project 5.</p>
+                    <button class="read-more" data-project="5">Read More</button>
+                </div>
+                <div class="project-item">
+                    <img src="project6.jpg" alt="Project 6">
+                    <h3>Project 6</h3>
+                    <p>Short description of Project 6.</p>
+                    <button class="read-more" data-project="6">Read More</button>
+                </div>
             </div>
         </section>
-
-        <!-- Professional Properties Section -->
-        <section id="properties" class="properties">
-            <h2>Professional Properties</h2>
-            <ul>
-                <li>Strong leadership experience from previous roles.</li>
-                <li>Exceptional communication skills for both technical and creative fields.</li>
-                <li>Proficiency in tools like Photoshop, After Effects, and more.</li>
-                <li>Adaptability to various project scopes and team dynamics.</li>
-            </ul>
-        </section>
-
-        <!--cursor trail effect-->
-        <section>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-            <div class="cirlce"></div>
-        </section>
-        
-
-
-
     </main>
+
+    <!-- Overlay Modal -->
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <span class="close">&times;</span>
+            <div id="project-details"></div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Casper. All rights reserved.</p>
@@ -123,18 +116,14 @@
         closeOverlay.addEventListener('click', () => {
             overlay.classList.add('hidden');
         });
-
-        
-        
-
     </script>
 
-    <script>
-        // Toggle Burger Menu
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+<script>
+    // Toggle Burger Menu
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
 </body>
 </html>

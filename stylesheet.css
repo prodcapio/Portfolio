@@ -1,0 +1,288 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #F3F3F3;
+    background-color: #2D2D2D;
+}
+
+/* Header */
+header {
+    background: #000000;
+    padding: 20px 10px;
+}
+
+/* Header navigation - space items and logo evenly */
+.header-nav {
+    display: flex;
+    justify-content: space-between; /* Even space across the header */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: 100px;
+    margin-right: 100px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #F3F3F3;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #C6C6C6;
+}
+
+/* Left and Right Links */
+.nav-links.left-links {
+    margin-right: auto; /* Align left links to the left */
+}
+
+.nav-links.right-links {
+    margin-left: auto; /* Align right links to the right */
+}
+
+/* Logo Container */
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.logo-circle {
+    display: inline-block;
+    background-color: #191B19;
+    color: #F3F3F3;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.logo-circle:hover {
+    transform: rotate(360deg);
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-line {
+    width: 30px;
+    height: 4px;
+    background-color: #F3F3F3;
+    transition: transform 0.3s ease;
+}
+
+/* Sections */
+section {
+    padding: 40px 15px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 15px;
+    background-color: #2D2D2D;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #F3F3F3;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 15px;
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    background: #AAAAAA;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.read-more {
+    padding: 8px 12px;
+    background: #000000;
+    color: #F3F3F3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.read-more:hover {
+    background: #C6C6C6;
+    color: #000000;
+}
+
+/* Professional Properties Section */
+.properties ul {
+    list-style: none;
+    padding: 0;
+}
+
+.properties ul li {
+    background: #191B19;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #000000;
+    color: #F3F3F3;
+    font-size: 0.8rem;
+}
+
+/* Media Queries */
+
+/* Small Screens (Mobile) */
+@media (max-width: 767px) {
+    .header-nav {
+        flex-direction: column;
+        align-items: flex-start; /* Align items vertically */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #191B19;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 250px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+        align-self: flex-end; /* Position burger icon to the right */
+    }
+
+    .logo-container {
+        margin: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* cursor trail effect */
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) {
+    .nav-links {
+        flex-direction: row; /* Horizontal navigation for tablets */
+        gap: 20px;
+    }
+
+    .project-grid {
+        flex-direction: row; /* Side-by-side projects for tablets */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .project-item {
+        width: 45%; /* Two projects per row */
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+/* Large Screens (Desktop) */
+@media (min-width: 1024px) {
+    .project-item {
+        width: 30%; /* Three projects per row for desktop */
+    }
+
+    .nav-links {
+        gap: 20%; /* Increase gap for desktop for more even spacing */
+    }
+
+    body {
+        font-size: 20px; /* Larger font for readability */
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+}
