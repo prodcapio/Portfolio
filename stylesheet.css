@@ -14,6 +14,26 @@ sort: 1D1D1F
     box-sizing: border-box;
 }
 
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif; /* Use Oswald for main headings */
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Further scale down h1 for small screens */
+  }
+
+  h2 {
+    font-size: 2rem; /* Further scale down h2 for small screens */
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 1.5rem; /* Further scale down h3 for small screens */
+    text-align: left;
+  }
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
@@ -127,8 +147,8 @@ header {
 
 /* Sections spacer */
 section {
-    padding: 40px 15px;
-    margin: 30px 0;
+    padding: 0px 0px;
+    margin: 0px 0;
     
 }
 
@@ -156,7 +176,7 @@ section {
 
 .hero__content {
     position: absolute;
-    bottom: 50px;
+    bottom: 5px;
     text-align: center;
     color: #E8DAD1;
     left: 50%;
@@ -164,17 +184,13 @@ section {
     width: 100%;
 }
 
-.hero h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 4.5rem;
-    margin: 0px;
-}
 
 /* Projects Section */
 .projects {
     background-color: #E8DAD1;
-    padding: 60px 15px;
-    text-align: center;
+    padding: 40px 15px;
+    margin: 20px 0;
+    text-align: left;
     border-radius: 30px 30px 0 0;
 }
 
@@ -197,10 +213,13 @@ section {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
+.projects h2 {
+    color: #1D1D1F;
+    padding: 60px 15px;
+}
 .project__button {
     padding: 8px 12px;
-    background: #000000;
+    background: #1D1D1F;
     color: #E8DAD1;
     border: none;
     border-radius: 5px;
@@ -209,22 +228,40 @@ section {
 }
 
 .project__button:hover {
-    background: #C6C6C6;
-    color: #000000;
+    background: #E8DAD1;
+    color: #1D1D1F;
 }
 
-/* Professionelle egenskaber afsnit */
-.properties ul {
-    list-style: none;
-    padding: 0;
+/* services og egenskaber afsnit */
+
+.services {
+    background-color: #1D1D1F;
+    padding: 40px 15px;
+    margin: 20+ 0;
+    text-align: left;
+    border-radius: 30px 30px 0 0;
 }
 
-.properties ul li {
-    background: #191B19;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
+.services__gridcontainer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
 }
+
+.services__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 40px 15px;
+    border: 1px solid #1D1D1F;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #1D1D1F;
+}
+
 
 /* Footer */
 footer {
@@ -260,6 +297,22 @@ footer {
         width: 45%; 
     }
 
+    .services__gridcontainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h1 {
+        font-size: 3.5rem; /* Scale h1 for tablet screens */
+      }
+    
+      h2 {
+        font-size: 2.8rem; /* Adjust h2 for tablet screens */
+      }
+    
+      h3 {
+        font-size: 2.2rem; /* Adjust h3 for tablet screens */
+      }
+
 
 }
 
@@ -273,23 +326,25 @@ footer {
         gap: 30px; /* Increase gap for desktop for more even spacing */
     }
 
+    .services__gridcontainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     body {
         font-size: 20px; /* Larger font for readability */
-    }
-
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    h2 {
-        font-size: 2.8rem;
-        margin-left: 60px;
-        margin-bottom: 30px;
-        text-align: left;
-        color: #1D1D1F;
-    }
-
-    h3 {
-        font-size: 2.2rem;
-    }
+      }
+    
+      h1 {
+        font-size: 3.5rem; /* Keep h1 size for larger screens */
+      }
+    
+      h2 {
+        font-size: 2.8rem; /* Maintain h2 size for larger screens */
+        
+        
+      }
+    
+      h3 {
+        font-size: 2.2rem; /* Maintain h3 size for larger screens */
+      }
 }
