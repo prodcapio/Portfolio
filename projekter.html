@@ -3,127 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects - Casper's Portfolio">
-    <meta name="author" content="Casper">
-    <title>Projects - Casper's Portfolio</title>
+    <meta name="description" content="Casper's Portfolio">
+    <title>Casper's Portfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100&family=Oswald:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <header>
-        <nav class="header-nav">
+        <nav class="header__nav">
+
             <!-- Left-aligned links -->
-            <ul class="nav-links left-links">
+            <ul class="nav__links nav__links--left">
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="projekter.html">Projekter</a></li>
             </ul>
-            <!-- Logo Container -->
-            <div class="logo-container">
-                <div class="logo-circle">Casper</div>
+
+            <!-- Logo Container (navngibet header__logo da den ikke tænkes med som hørende under navigationsbar) -->
+            <div class="header__logo">
+                <div class="logo__circle">
+                    <img src="pictures/capio logo hvid.webp" alt="Logo">
+                </div>
             </div>
+
             <!-- Right-aligned links (for desktop) -->
-            <ul class="nav-links right-links">
+            <ul class="nav__links nav__links--right">
                 <li><a href="ommig.html">Om mig</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
-            <!-- Burger Menu for mobile -->
-            <div class="burger-menu" onclick="toggleMenu()">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-            </div>
+            
+
         </nav>
     </header>
 
-    <main>
-        <!-- Projects Page Hero Section -->
-        <section class="hero">
-            <h1>My Projects</h1>
-            <p>Explore my work and creative journey.</p>
-        </section>
+    <main class="with-fixed-header">
 
-        <!-- Projects Section -->
         <section id="projects" class="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>Short description of Project 1.</p>
-                    <button class="read-more" data-project="1">Read More</button>
+            <h2>Projekter</h2>
+            <div class="projects__grid">
+                <div class="project__item">
+                    <img src="pictures/Plakat.webp" alt="Project 1">
+                    <h3>H.C.A. Festivals Multimedieskærm</h3>
+                    <p>Vores koncept, en multimedieskærm, forener en digital festivalguide 
+                        med en interaktiv løsning, der fremhæver festivalens highlights og skaber en 
+                        unik brugeroplevelse, som rækker ud over selve festivalbesøget - 
+                        Et interaktivt installationsprojekt hvor ALT kan ske</p>
+                    <button class="project__button" data-project="1">Læs mere</button>
                 </div>
-                <div class="project-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Short description of Project 2.</p>
-                    <button class="read-more" data-project="2">Read More</button>
+                <div class="project__item">
+                    <img src="pictures/Plakat.webp" alt="Project 2">
+                    <h3>Projekt 2</h3>
+                    <p>Beskrivelse</p>
+                    <button class="project__button" data-project="2">Læs mere</button>
                 </div>
-                <div class="project-item">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project 3</h3>
-                    <p>Short description of Project 3.</p>
-                    <button class="read-more" data-project="3">Read More</button>
+                <div class="project__item">
+                    <img src="pictures/Plakat.webp" alt="Project 3">
+                    <h3>Projekt 3</h3>
+                    <p>Beskrivelse</p>
+                    <button class="project__button" data-project="3">Læs mere</button>
                 </div>
-                <div class="project-item">
-                    <img src="project4.jpg" alt="Project 4">
-                    <h3>Project 4</h3>
-                    <p>Short description of Project 4.</p>
-                    <button class="read-more" data-project="4">Read More</button>
+                <div class="project__item">
+                    <img src="pictures/Plakat.webp" alt="Project 4">
+                    <h3>Projekt 4</h3>
+                    <p>Beskrivelse</p>
+                    <button class="project__button" data-project="4">Læs mere</button>
                 </div>
-                <div class="project-item">
-                    <img src="project5.jpg" alt="Project 5">
-                    <h3>Project 5</h3>
-                    <p>Short description of Project 5.</p>
-                    <button class="read-more" data-project="5">Read More</button>
+                <div class="project__item">
+                    <img src="pictures/Plakat.webp" alt="Project 5">
+                    <h3>Projekt 5</h3>
+                    <p>Beskrivelse</p>
+                    <button class="project__button" data-project="5">Læs mere</button>
                 </div>
-                <div class="project-item">
-                    <img src="project6.jpg" alt="Project 6">
-                    <h3>Project 6</h3>
-                    <p>Short description of Project 6.</p>
-                    <button class="read-more" data-project="6">Read More</button>
+                <div class="project__item">
+                    <img src="pictures/Plakat.webp" alt="Project 6">
+                    <h3>Projekt 6</h3>
+                    <p>Beskrivelse</p>
+                    <button class="project__button" data-project="6">Læs mere</button>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Overlay Modal -->
-    <div id="overlay" class="overlay hidden">
-        <div class="overlay-content">
-            <span class="close">&times;</span>
-            <div id="project-details"></div>
-        </div>
-    </div>
+
+    </main>
 
     <footer>
         <p>&copy; 2024 Casper. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Overlay functionality
-        const overlay = document.getElementById('overlay');
-        const projectDetails = document.getElementById('project-details');
-        const closeOverlay = document.querySelector('.close');
-
-        document.querySelectorAll('.read-more').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const projectId = e.target.dataset.project;
-                projectDetails.innerHTML = `<h3>Project ${projectId}</h3><p>More details about Project ${projectId} go here. This is where you can describe the project's goals, process, and results.</p>`;
-                overlay.classList.remove('hidden');
-            });
-        });
-
-        closeOverlay.addEventListener('click', () => {
-            overlay.classList.add('hidden');
-        });
-    </script>
-
-<script>
-    // Toggle Burger Menu
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-    }
-</script>
 </body>
 </html>

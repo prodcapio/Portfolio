@@ -318,16 +318,62 @@ header {
     border-radius: 10px;
 }
 
+
+
+/* ommig siden */
+
+.about {
+    background-color: #1D1D1F;
+    padding: 40px 20px;
+    margin: 20px 0;
+    text-align: left;
+    border-radius: 30px 30px 0 0;
+}
+
+.about__intro {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.about__intro img {
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+}
+
+.more {
+    background-color: #1D1D1F;
+    padding: 40px 20px;
+    margin: 20px 0;
+    text-align: left;
+    border-radius: 30px 30px 0 0;
+}
+
+.more__content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
-    background: #000000;
-    color: #F3F3F3;
+    background: #E8DAD1;
+    color: #172A39;
     font-size: 0.8rem;
 }
 
-
+footer a {
+    color: #172A39;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
 
 /* Media Queries */
 
