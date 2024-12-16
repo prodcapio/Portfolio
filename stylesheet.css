@@ -19,28 +19,28 @@ html {
 }
 
 h1, h2, h3 {
-    font-family: 'Oswald', sans-serif; /* Use Oswald for main headings */
+    font-family: 'Oswald', sans-serif; 
     font-weight: 400;
     margin-bottom: 16px;
   }
   
   h1 {
-    font-size: 2.5rem; /* Further scale down h1 for small screens */
+    font-size: 3rem; 
   }
 
   h2 {
-    font-size: 2rem; /* Further scale down h2 for small screens */
+    font-size: 2rem; 
     text-align: left;
   }
 
   h3 {
-    font-size: 1.5rem; /* Further scale down h3 for small screens */
+    font-size: 1.5rem; 
     text-align: left;
   }
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #E8DAD1;
     background-color: #1D1D1F;
@@ -181,6 +181,28 @@ header {
     width: 100%;
 }
 
+.sectionline {
+    display: flex; 
+    align-items: center; 
+}
+
+.sectionline h2 {
+    margin: 0; 
+}
+
+.sectionline .divider {
+    flex-grow: 1; 
+    height: 2px; 
+    background-color: #E8DAD1; 
+    margin-left: 10px; 
+}
+
+.projects .sectionline .divider {
+    flex-grow: 1; 
+    height: 2px; 
+    background-color: #1D1D1F; 
+    margin-left: 10px;
+}
 
 /* Projects Section */
 .projects {
@@ -192,9 +214,12 @@ header {
 }
 
 .projects__grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 40px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .projects h2 {
@@ -202,29 +227,43 @@ header {
 }
 
 .project__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: #172A39;
     color: #E8DAD1;
     padding: 20px;
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     text-align: center;
 }
 
 .project__item img {
     max-width: 100%;
-    height: auto;
+    height: 600px;
+    object-fit: cover;
     margin-bottom: 20px; 
     border-radius: 10px; 
+}
+
+.animation {
+    width: 100%;
+    height: 600px;
+    max-width: 400px;
+    background: url('pictures/animation.webp') 0 0 no-repeat;
+    animation: play 1.5s steps(12) infinite;
+    animation-direction: alternate;  
+}
+@keyframes play 
+{
+    0%{background-position:0px;}
+    100%{background-position: -4800px;}
 }
 
 .project__item h3 {
     text-align: left; 
     align-self: flex-start; 
-    margin-bottom: 10px; 
+    margin-bottom: 20px; 
     width: 100%; 
 }
 
@@ -271,7 +310,7 @@ header {
 .services__gridcontainer {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -304,7 +343,7 @@ header {
 }
 
 .services__list {
-    list-style: none;
+    list-style: circle;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -357,23 +396,114 @@ header {
     gap: 20px;
 }
 
-/* Footer */
-footer {
+/* Block: contact */
+.contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #E8DAD1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact__title {
     text-align: center;
+    color: #1D1D1F;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form-group {
+    margin-bottom: 15px;
+}
+
+.contact__label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.contact__input, 
+.contact__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact__button {
+    padding: 10px;
+    background-color: #172A39;
+    color: #1D1D1F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact__button:hover {
+    background-color: #172A39;
+}
+
+/* Block: contact__info */
+.contact__info {
+    margin-top: 30px;
     padding: 15px;
     background: #E8DAD1;
-    color: #172A39;
+    border-radius: 8px;
+}
+
+.contact__info-title {
+    text-align: center;
+    color: #1D1D1F;
+    margin-bottom: 15px;
+}
+
+.contact__info-item {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #1D1D1F;
+    color: #E8DAD1;
     font-size: 0.8rem;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-section {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #E8DAD1;
+    text-align: left;
 }
 
 footer a {
-    color: #172A39;
+    color: #E8DAD1;
     text-decoration: none;
     margin: 0 10px;
+    text-align: left;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
+
 
 /* Media Queries */
 
@@ -385,21 +515,17 @@ footer a:hover {
         gap: 20px;
     }
 
-    /* Side-by-side - Two projects per row for tablets */
 
     .projects__grid {
-        flex-direction: row; 
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
     }
 
-    .project__item {
-        width: 45%; 
-    }
+
 
     .services__gridcontainer {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
     }
 
     h1 {
@@ -407,11 +533,11 @@ footer a:hover {
       }
     
       h2 {
-        font-size: 2.8rem; /* Adjust h2 for tablet screens */
+        font-size: 2.5rem; /* Adjust h2 for tablet screens */
       }
     
       h3 {
-        font-size: 2.2rem; /* Adjust h3 for tablet screens */
+        font-size: 2rem; /* Adjust h3 for tablet screens */
       }
 
 
@@ -419,33 +545,30 @@ footer a:hover {
 
 /* Large Screens (Desktop) */
 @media (min-width: 1024px) {
-    .project__item {
-        width: 30%; /* Three projects per row for desktop */
+    
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px; 
     }
-
-    .nav-links {
-        gap: 30px; /* Increase gap for desktop for more even spacing */
-    }
-
+    
     .services__gridcontainer {
         grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
     }
 
     body {
-        font-size: 20px; /* Larger font for readability */
+        font-size: 1.2rem; 
       }
     
       h1 {
-        font-size: 3.5rem; /* Keep h1 size for larger screens */
+        font-size: 4rem; 
       }
     
       h2 {
-        font-size: 2.8rem; /* Maintain h2 size for larger screens */
-        
-        
+        font-size: 2.8rem;   
       }
     
       h3 {
-        font-size: 2.2rem; /* Maintain h3 size for larger screens */
+        font-size: 2.2rem; 
       }
 }
