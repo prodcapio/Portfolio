@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
             <!-- Logo Container (navngibet header__logo da den ikke tænkes med som hørende under navigationsbar) -->
             <div class="header__logo">
                 <div class="logo__circle">
-                    <img src="pictures/capio logo hvid.webp" alt="Logo">
+                    <img src="pictures/logo.webp" alt="Logo">
                 </div>
             </div>
 
@@ -38,57 +38,265 @@
 
     <main class="with-fixed-header">
 
-        <section id="projects" class="projects">
-            <h2>Projekter</h2>
-            <div class="projects__grid">
-                <div class="project__item">
-                    <img src="pictures/Plakat.webp" alt="Project 1">
-                    <h3>H.C.A. Festivals Multimedieskærm</h3>
-                    <p>Vores koncept, en multimedieskærm, forener en digital festivalguide 
-                        med en interaktiv løsning, der fremhæver festivalens highlights og skaber en 
-                        unik brugeroplevelse, som rækker ud over selve festivalbesøget - 
-                        Et interaktivt installationsprojekt hvor ALT kan ske</p>
-                    <button class="project__button" data-project="1">Læs mere</button>
-                </div>
-                <div class="project__item">
-                    <img src="pictures/Plakat.webp" alt="Project 2">
-                    <h3>Projekt 2</h3>
-                    <p>Beskrivelse</p>
-                    <button class="project__button" data-project="2">Læs mere</button>
-                </div>
-                <div class="project__item">
-                    <img src="pictures/Plakat.webp" alt="Project 3">
-                    <h3>Projekt 3</h3>
-                    <p>Beskrivelse</p>
-                    <button class="project__button" data-project="3">Læs mere</button>
-                </div>
-                <div class="project__item">
-                    <img src="pictures/Plakat.webp" alt="Project 4">
-                    <h3>Projekt 4</h3>
-                    <p>Beskrivelse</p>
-                    <button class="project__button" data-project="4">Læs mere</button>
-                </div>
-                <div class="project__item">
-                    <img src="pictures/Plakat.webp" alt="Project 5">
-                    <h3>Projekt 5</h3>
-                    <p>Beskrivelse</p>
-                    <button class="project__button" data-project="5">Læs mere</button>
-                </div>
-                <div class="project__item">
-                    <img src="pictures/Plakat.webp" alt="Project 6">
-                    <h3>Projekt 6</h3>
-                    <p>Beskrivelse</p>
-                    <button class="project__button" data-project="6">Læs mere</button>
+        <section id="projectpage" class="projectpage">
+            <div class="sectionline">
+                <h2>Projekter</h2>
+                <div class="divider"></div>
+            </div>
+
+                <!--HCA Festivals-->
+                <div class="projectpage__grid" id="project-1">
+                    <div class="projectpage__item">
+                        <h2>H.C.A. Festivals Multimedieskærm</h2>
+                        <video autoplay loop muted playsinline>
+                        <source src="videos/hcavideo.mp4" type="video/mp4">
+                        <source src="videos/hcavideo.webm" type="video/webm">
+                        </video>
+                    
+                        <p>Forestil dig at stå midt under H.C.A. Festivals og blive 
+                        mødt af en 
+                        interaktiv multimedieskærm, der gør dig til hovedpersonen 
+                        i H.C. Andersens magiske univers. Jeg præsenterer et 
+                        koncept, der ikke bare informerer - det engagerer, 
+                        inspirerer og samler mennesker.
+                        </p>
+                
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Information, der fanger:</h3>
+                            <p>De to forreste skærme, formet 
+                                som en åben bog, guider dig igennem festivalens 
+                                events og lokationer. Alt, du skal vide, er lige 
+                                foran dig – elegant og let tilgængeligt.</p>
+                        </div>
+                            <img src="pictures/info1.webp" alt="Infoskærm">
+                            <img src="pictures/info2.webp" alt="Inforskærm">
+                        </div>
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Kreativitet i centrum:</h3>
+                            <p>Gå bagom “bog-skærmen” og oplev interaktive 
+                                tegnevægge, hvor du kan skabe din egen kunst. 
+                                Tegningen kan du downloade eller få vist på den 
+                                store skærm bagpå, hvor den bliver en del af en 
+                                farverigt univers – et fælles værk, der hylder 
+                                festivalens værdier om fællesskab og kreativitet.</p>
+                        </div>
+                            <img src="pictures/tegning.webp" alt="Tegneskærm">
+                        </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Dine festival minder i realtid:</h3>
+                            <p>På disse skærme kan du se highlights fra 
+                                festivalens events, fange de uforglemmelige 
+                                øjeblikke og opleve festivalens essens gennem en 
+                                konstant opdatering af indhold. De er en invitation 
+                                til at opleve, føle og dele. Forestil dig en mosaik 
+                                af billeder og videoer, der vises på flere skærme 
+                                samtidigt, og som bringer festivalens magiske 
+                                stemning til live.</p>
+                        </div>
+                            <img src="pictures/highlights1.webp" alt="Highlightskærm">
+                        </div>
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Eventyrlige selfies:</h3>
+                            <p>På bagsiden af "bog-skærmen" finder du en selfie-sektion, hvor du 
+                                kan vælge en baggrund fra ikoniske eventyr som 
+                                Den Flyvende Kuffert eller Klods Hans. Tag et 
+                                billede med dine venner og træd direkte ind i 
+                                eventyret – en unik oplevelse, der skaber minder.</p>
+                        </div>
+                            <img src="pictures/selfie.webp" alt="Selfieskærm">
+                    </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Fra væggen til eventyret:</h3>
+                            <p>Når du er færdig med din tegning, kan du nemt uploade den 
+                                direkte fra tegnevæggen til HCA-universet. Dette sker via 
+                                en intuitiv proces, hvor du med et enkelt tryk sender din 
+                                kunstværk op på den digitale platform bag skærmene. Din tegning 
+                                bliver derefter en del af et større kunstværk, der samles 
+                                med andres bidrag.</p>
+                        </div>
+                    </div>
+                        <div class="image__hca">
+                            <img src="pictures/hcaunivers.webp" alt="Hca-univers">
+                        </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Magisk atmosfære:</h3>
+                            <p>Atmosfæren fuldendes med ambient musik, der omfavner dig og 
+                                gør oplevelsen magisk. Konceptet er intuitivt og designet 
+                                til at tiltrække især unge – let at bruge, sjovt at dele og 
+                                perfekt til sociale medier.</p>
+                        </div>
+                    </div>
+
+                    <div class="audio_hca">
+                        <audio controls>
+                            <source src="audio/hcamusik.mp3" type="audio/mp3">
+                            Din browser understøtter ikke denne lydfil.
+                          </audio>
+                    </div>      
+            </div>
+
+            <!--Restaurant vår-->
+            <div class="projectpage__grid" id="project-2">
+                <div class="projectpage__item">
+                    <h2>Re-design af restaurant Vår</h2>
+                    <img src="pictures/vaar.webp" alt="Forside Vår">
+                    <p>Re-design af Restaurant Vårs hjemmeside (vaar.dk) med et helt nyt 
+                        look. Re-designet er mere brugervenligt og har et nyt æstestisk look der 
+                        både fremhæver restaurantens identitet og sikrer en problemfri, visuelt appellerende 
+                        brugeroplevelse. En ny hjemmeside, der tiltrækker flere kunder og 
+                        efterlader et stærkt førstehåndsindtryk.</p>
+                
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Forside</h3>
+                            <p>I vores redesign har vi skabt en mere indbydende og brugervenlig 
+                                forside. Vi har rettet balancen i menulinjen, så alle punkter 
+                                fremstår ensartede og professionelle. Designet er blevet mere 
+                                engagerende, og både visuelt og indholdsmæssigt præsenteres 
+                                restaurantens identitet bedre. Resultatet er en mere tiltalende 
+                                forside, der styrker førstehåndsindtrykket.</p>
+                        </div>    
+                    </div>
+
+                    <div class="projectpage__imagesplit">
+                        <h3>Før</h3>
+                        <img src="pictures/forsidefoer.webp" alt="Forside før">
+                    </div>
+
+                    <div class="projectpage__imagesplit">
+                        <h3>Efter</h3>
+                        <img src="pictures/vaar.webp" alt="Forside efter">
+                    </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Menukort</h3>
+                            <p>Vi har gjort menuen mere overskuelig, så brugerne nemt kan finde 
+                            og forstå de forskellige retter. Ved at forenkle strukturen 
+                            har vi gjort det lettere for gæsterne at navigere og 
+                            få den information, de søger.</p>
+                        </div>    
+                    </div>
+
+                    <div class="projectpage__imagesplit">
+                        <h3>Før</h3>
+                        <img src="pictures/menukort.webp" alt="Menukort før">
+                    </div>
+                    <div class="projectpage__imagesplit">
+                        <h3>Efter</h3>
+                        <img src="pictures/menukortefter.webp" alt="Menukort efter">
+                    </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Drikkevarer og Private Dining</h3>
+                            <p>Vi har forbedret designet af sektionerne for drikkevarer 
+                            og private dining, så de fremstår mere overskuelige og 
+                            indbydende. Selvom indholdet er det samme, er private 
+                            dining-sektionen blevet opdateret med en praktisk 
+                            bookingknap, der gør det nemmere for gæsterne at reservere. 
+                            Begge sektioner er blevet designet, så de visuelt tilpasser 
+                            sig resten af forsiden og giver en mere strømlinet 
+                            brugeroplevelse.</p>
+                        </div>    
+                    </div>
+
+                    <div class="projectpage__imagesplit">
+                        <h3>Før</h3>
+                        <img src="pictures/drikkevarefoer.webp" alt="Drikkevare og private dining før">
+                    </div>
+                    <div class="projectpage__imagesplit">
+                        <h3>Efter</h3>
+                        <img src="pictures/drikkevare.webp" alt="Drikkevare og private dining efter">
+                    </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Om os</h3>
+                            <p>Vi har tilføjet et “Om os”-afsnit, der giver restauranten 
+                                en mere personlig og indbydende profil. Afsnittet er 
+                                designet til at fortælle restaurantens historie og værdier 
+                                på en engagerende måde, hvilket skaber en tættere forbindelse 
+                                til gæsterne. Det nye design gør det nemt at få et indblik i 
+                                restaurantens unikke identitet og giver en mere autentisk 
+                                oplevelse.</p>  
+                        </div>    
+                    </div>
+
+                    <div class="projectpage__imagesplit">
+                        <img src="pictures/omos.webp" alt="Om Os">
+                    </div>
+
+                    <div class="projectpage__split">
+                        <div>
+                            <h3>Mobilversion</h3>
+                            <p>Vi har forenklet mobilversionen af hjemmesiden ved at 
+                                erstatte de to menuer med en enkel dropdown-menu. 
+                                Dette gør navigationen mere brugervenlig og pladsbesparende 
+                                på telefonen, samtidig med at det understøtter Vår’s minimalistiske 
+                                design. Derudover har vi tilføjet en pil nederst på siden, så 
+                                brugerne nemt kan komme hurtigt tilbage til toppen. Denne funktion 
+                                er baseret på feedback fra testpersoner, der ønskede en lettere 
+                                måde at navigere på.</p>  
+                        </div>    
+                    </div>
+                    
+                    <div class="projectpage__split">
+                        <h3>Før</h3>
+                        <img src="pictures/mobil1.webp" alt="Mobilversion før">
+                        <img src="pictures/mobil2.webp" alt="Mobielversion før 2">
+                    </div>
+                    <div class="projectpage__split">
+                        <h3>Efter</h3>
+                        <img src="pictures/mobilefter1.webp" alt="Mobilversion efter">
+                        <img src="pictures/mobilefter2.webp" alt="Mobilversion efter 2">
+                    </div>
+
+
+
+
+
                 </div>
             </div>
+
         </section>
 
 
     </main>
-
-    <footer>
-        <p>&copy; 2024 Casper. All rights reserved.</p>
+    <footer class="footer">
+        
+        <section class="footer-section">
+            <h3>Kontakt Information</h3>
+            <p>Email: <a href="mailto:prodcapio@gmail.com">prodcapio@gmail.com</a></p>
+            <p>Phone: <a href="tel:+4512345678">+45 20 95 95 95</a></p>
+        </section>
+        <section class="footer-section">
+            <h3>Socials</h3>
+            <p>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </p>
+        </section>
+        <section class="footer-section">
+            <h3>Links</h3>
+            <p>
+                <a href="index.html">Hjem</a>
+                <a href="projekter.html">Projekter</a> 
+                <a href="ommig.html">Om mig</a> 
+                <a href="kontakt.html">Kontakt</a>
+            </p>
+        </section>
+        
     </footer>
-
 </body>
 </html>

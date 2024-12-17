@@ -276,7 +276,7 @@ header {
 
 .project__item:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 5px 15px(#1D1D1F);
+    box-shadow: 0 5px 15px #1D1D1F;
 }
 
 .project__button {
@@ -320,7 +320,7 @@ header {
 .services__item {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: start;
     text-align: left;
     padding: 30px;
     border: 1px solid #1D1D1F;
@@ -357,7 +357,88 @@ header {
     border-radius: 10px;
 }
 
+/* Projekt siden */
 
+.projectpage {
+    padding: 20px;
+}
+
+/* Hero sektion */
+.projectpage__grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+.projectpage__item {
+    text-align: left;
+    border: 2px solid #E8DAD1;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.projectpage__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.projectpage__item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* yderligere information under hero sektion - opdelt */
+.projectpage__split {
+    display: flex; 
+    flex-wrap: nowrap; 
+    gap: 20px; 
+    align-items: flex-start; 
+    margin: 20px 0;
+}
+/* tekst i div for at opdele */
+.projectpage__split div {
+    flex-grow: 1; 
+}
+
+.projectpage__split img {
+    width: 100%; 
+    max-width: 150px; 
+    margin-left: 20px; 
+    margin-top: 20px;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+/* Plads under h3 */
+.projectpage__split h3 {
+    margin: 0 0 10px; 
+}
+
+.image__hca {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+.projectpage__imagesplit {
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.projectpage__imagesplit img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
 
 /* ommig siden */
 
@@ -371,12 +452,12 @@ header {
 
 .about__intro {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
 .about__intro img {
-    max-width: 30%;
+    max-width: 50%;
     height: auto;
     margin-bottom: 20px; 
     border-radius: 10px; 
@@ -396,7 +477,11 @@ header {
     gap: 20px;
 }
 
-/* Block: contact */
+/* Kontakt side */
+.contact__header {
+    text-align: center;
+}
+
 .contact {
     max-width: 600px;
     margin: 50px auto;
@@ -424,13 +509,14 @@ header {
     margin: 10px 0 5px;
     font-weight: bold;
     display: block;
+    color: #1D1D1F;
 }
 
 .contact__input, 
 .contact__textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #1D1D1F;
     border-radius: 5px;
     font-size: 1em;
 }
@@ -438,7 +524,7 @@ header {
 .contact__button {
     padding: 10px;
     background-color: #172A39;
-    color: #1D1D1F;
+    color: #E8DAD1;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -450,7 +536,6 @@ header {
     background-color: #172A39;
 }
 
-/* Block: contact__info */
 .contact__info {
     margin-top: 30px;
     padding: 15px;
@@ -467,6 +552,7 @@ header {
 .contact__info-item {
     margin: 10px 0;
     line-height: 1.6;
+    color: #1D1D1F;
 }
 
 /* Footer */
@@ -504,7 +590,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
 /* Media Queries */
 
 
@@ -521,7 +606,9 @@ footer a:hover {
         max-width: 1200px;
     }
 
-
+    .projectpage__split img {
+        max-width: 200px; 
+    }
 
     .services__gridcontainer {
         grid-template-columns: repeat(2, 1fr);
@@ -554,6 +641,10 @@ footer a:hover {
     .services__gridcontainer {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
+    }
+
+    .projectpage__split img {
+        max-width: 300px; 
     }
 
     body {

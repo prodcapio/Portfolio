@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
             <!-- Logo Container (navngibet header__logo da den ikke tænkes med som hørende under navigationsbar) -->
             <div class="header__logo">
                 <div class="logo__circle">
-                    <img src="pictures/capio logo hvid.webp" alt="Logo">
+                    <img src="pictures/logo.webp" alt="Logo">
                 </div>
             </div>
 
@@ -38,17 +38,21 @@
 
     <main class="with-fixed-header">
         <section>
+            <h1 class="contact__header">Nysgerrig?</h1>
+        </section>
+
+        <section>
             <div class="contact">
-                <h1 class="contact__title">Contact Me</h1>
+                <h1 class="contact__title">Kontakt mig</h1>
         
                 <form class="contact__form" action="#" method="POST">
                     <div class="contact__form-group">
-                        <label for="name" class="contact__label">Skriv dit navn her: Lars Larsen</label>
+                        <label for="name" class="contact__label">Skriv dit navn her:</label>
                         <input type="text" id="name" name="name" class="contact__input" required>
                     </div>
                     
                     <div class="contact__form-group">
-                        <label for="email" class="contact__label">Skriv din mail her: larslarsen@123.dk </label>
+                        <label for="email" class="contact__label">Skriv din mail her:</label>
                         <input type="email" id="email" name="email" class="contact__input" required>
                     </div>
                     
@@ -71,10 +75,31 @@
         </section>
 
     </main>
-
-    <footer>
-        <p>&copy; 2024 Casper. All rights reserved.</p>
+    <footer class="footer">
+        
+        <section class="footer-section">
+            <h3>Kontakt Information</h3>
+            <p>Email: <a href="mailto:prodcapio@gmail.com">prodcapio@gmail.com</a></p>
+            <p>Phone: <a href="tel:+4512345678">+45 20 95 95 95</a></p>
+        </section>
+        <section class="footer-section">
+            <h3>Socials</h3>
+            <p>
+                <a href="https://www.youtube.com/@ProdCapio" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/casperhansen97/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/casper-hansen-058ab0268/" target="_blank">LinkedIn</a>
+            </p>
+        </section>
+        <section class="footer-section">
+            <h3>Links</h3>
+            <p>
+                <a href="index.html">Hjem</a>
+                <a href="projekter.html">Projekter</a> 
+                <a href="ommig.html">Om mig</a> 
+                <a href="kontakt.html">Kontakt</a>
+            </p>
+        </section>
+        
     </footer>
-
 </body>
 </html>

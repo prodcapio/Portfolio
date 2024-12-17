@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
             <!-- Logo Container (navngibet header__logo da den ikke tænkes med som hørende under navigationsbar) -->
             <div class="header__logo">
                 <div class="logo__circle">
-                    <img src="pictures/capio logo hvid.webp" alt="Logo">
+                    <img src="pictures/logo.webp" alt="Logo">
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
 
         <section class="hero">
             <div class="hero__image-wrapper">
-                <img src="pictures/hero-picture copy.webp" alt="hero-image">
+                <img src="pictures/hero-picture.webp" alt="hero-image">
             </div>
             
             <div class="hero__content">
@@ -57,23 +57,38 @@
                 <h2>Projekter</h2>
                 <div class="divider"></div>
             </div>
-            
             <div class="projects__grid">
+            
+<!--Projekt 1-->
                 <div class="project__item">
                     <img src="pictures/plakat.webp" alt="Project 1">
                     <h3>H.C.A. Festivals Multimedieskærm</h3>
                     <p>Digital festivalguide, interaktiv highlights og en sektion hvor 
                         alle kreative sjæle kan slå sig løs
                          - Et interaktivt installationsprojekt hvor ALT kan ske</p>
-                    <button class="project__button" data-project="1">Læs mere</button>
+                    <button class="project__button" data-project="1" onclick="goToProject(this)">Læs mere</button>
                 </div>
+                <script>
+                    function goToProject(button) {
+                      const projectId = button.getAttribute('data-project');
+                      window.location.href = `projekter.html#project-${projectId}`;
+                    }
+                </script>
+<!--Projekt 2-->
                 <div class="project__item">
                     <img src="pictures/re-design.webp" alt="Project 2">
                     <h3>Re-design af restaurant vaar</h3>
                     <p>Re-design af Restaurant Vårs hjemmeside (vaar.dk) med fokus på at 
                         sikre en mere brugervenlig og visuelt appellerende oplevelse.</p>
-                    <button class="project__button" data-project="2">Læs mere</button>
+                        <button class="project__button" data-project="2" onclick="goToProject(this)">Læs mere</button>
                 </div>
+                <script>
+                    function goToProject(button) {
+                      const projectId = button.getAttribute('data-project');
+                      window.location.href = `projekter.html#project-${projectId}`;
+                    }
+                </script>
+<!--Projekt 3-->              
                 <div class="project__item">
                     <div class="animation"></div>
                     <h3>Animation/GIF</h3>
@@ -116,7 +131,6 @@
                 <h3>Brand identitet</h3>
                 <img src="pictures/brandidentitet.webp" alt="Animation 1">
                 <p>Fremhæve brandets unikke personlighed og værdier gennem design og brugeroplevelse.</p>
-                <p>
                     <ul class="services__list">
                         <li>Discovery</li>
                         <li>Brand strategi</li>
@@ -124,14 +138,12 @@
                         <li>Brand guidelines</li>
                         <li>Logo</li>
                     </ul>
-                </p>
             </div>
             
             <div class="services__item">
                 <h3>Web design</h3>
-                <img src="pictures/webdesign copy.webp" alt="Animation 2">
+                <img src="pictures/webdesign.webp" alt="Animation 2">
                 <p>Et gennemarbejdet design, der skaber grundlaget for den mest optimale webopsætningen til jeres behov.</p>
-                <p>
                     <ul class="services__list">
                         <li>Website design</li>
                         <li>Wireframes</li>
@@ -139,14 +151,12 @@
                         <li>Responsive & mobile</li>
                         <li>UI/UX design</li>
                     </ul>
-                </p>
             </div>
             
             <div class="services__item">
                 <h3>Grafisk design</h3>
                 <img src="pictures/grafiskdesign.webp" alt="Animation 3">
                 <p>Fokus på kreativ branding, UI/UX design og visuel kommunikation, der engagerer og formidler klare budskaber.</p>
-                <p>
                     <ul class="services__list">
                         <li>Illustrationer</li>
                         <li>Visuel storytelling</li>
@@ -154,14 +164,12 @@
                         <li>Digital og print design</li>
                         <li>Layout og komposition</li>
                     </ul>
-                </p>
             </div>
             <div class="services__item">
                 <h3>Sound Design</h3>
                 <img src="pictures/sounddesign.webp" alt="Animation 3">
                 <p>Professionelt sound design til alle typer projekter. 
                     Alt fra lydeffekter til hjemmesider og reklamer til skræddersyede lydoplevelser </p>
-                <p>
                     <ul class="services__list">
                         <li>Fl Studio, Logic pro</li>
                         <li>Sound Design</li>
@@ -169,7 +177,6 @@
                         <li>Ambient backtracks</li>
                         <li>Reklame lyd og kompositioner</li>
                     </ul>
-                </p>
             </div> 
         </div>
         </section>
