@@ -196,14 +196,15 @@ header {
 }
 
 .sectionline h2 {
-    margin: 0; 
+    margin-left: 20px; 
 }
 
 .sectionline .divider {
     flex-grow: 1; 
     height: 2px; 
     background-color: #E8DAD1; 
-    margin-left: 10px; 
+    margin-left: 10px;
+    margin-right: 20px;
 }
 
 .projects .sectionline .divider {
@@ -418,7 +419,8 @@ header {
 }
 
 .projectpage__split img {
-    width: 100%; 
+    width: 80%;
+    height: autox; 
     max-width: 150px; 
     margin-left: 20px; 
     margin-top: 10px;
@@ -630,7 +632,7 @@ footer a:hover {
 
 
 /* Medium Screens (Tablets) */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .nav-links {
         flex-direction: row; 
         gap: 20px;
@@ -714,7 +716,7 @@ footer a:hover {
       }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
 
     .nav__links {
         display: flex;
@@ -738,9 +740,16 @@ footer a:hover {
         display: none; 
     }
 
+    .projectpage__split img {
+        max-width: 100px;
+    }
+
     .video iframe {
         width: 100%; /* Full width for mobile */
         max-width: none; /* Remove any maximum width restriction */
         border-radius: 5px; /* Slightly smaller border radius */
+    }
+    .footer {
+        flex-direction: column;
     }
 }
