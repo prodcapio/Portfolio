@@ -508,6 +508,8 @@ header {
     flex-direction: row;
     border-radius: 10px;
     gap: 20px;
+    width: 300px;
+    height: 169px; 
 }
 
 /* Kontakt side */
