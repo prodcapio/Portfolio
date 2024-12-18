@@ -420,7 +420,7 @@ header {
 
 .projectpage__split img {
     width: 80%;
-    height: autox; 
+    height: auto; 
     max-width: 150px; 
     margin-left: 20px; 
     margin-top: 10px;
