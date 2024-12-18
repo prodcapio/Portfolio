@@ -18,7 +18,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Oswald', sans-serif; 
     font-weight: 400;
     margin-bottom: 16px;
@@ -35,6 +35,11 @@ h1, h2, h3 {
 
   h3 {
     font-size: 1.5rem; 
+    text-align: left;
+  }
+
+  h4 {
+    font-size: 1.3rem; 
     text-align: left;
   }
 
@@ -67,7 +72,7 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -360,7 +365,8 @@ header {
 /* Projekt siden */
 
 .projectpage {
-    padding: 20px;
+    padding: 40px 20px;
+    width: 100%;
 }
 
 /* Hero sektion */
@@ -368,7 +374,7 @@ header {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
     padding: 40px 20px;
     margin: 20px 0;
 }
@@ -411,7 +417,7 @@ header {
     width: 100%; 
     max-width: 150px; 
     margin-left: 20px; 
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px; 
     object-fit: cover;
 }
@@ -419,6 +425,7 @@ header {
 .projectpage__split h3 {
     margin: 0 0 10px; 
 }
+
 
 .image__hca {
     width: 100%;
@@ -436,8 +443,16 @@ header {
 .projectpage__imagesplit img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    
+    border-radius: 10px;  
+}
+
+.projectpage__split li {
+    list-style: circle;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #E8DAD1;
+    margin-left: 20px;
 }
 
 /* ommig siden */
@@ -445,7 +460,7 @@ header {
 .about {
     background-color: #1D1D1F;
     padding: 40px 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
     text-align: left;
     border-radius: 30px 30px 0 0;
 }
@@ -463,17 +478,31 @@ header {
     border-radius: 10px; 
 }
 
-.more {
-    background-color: #1D1D1F;
-    padding: 40px 20px;
-    margin: 20px 0;
-    text-align: left;
-    border-radius: 30px 30px 0 0;
+/* YouTube Channel Section */
+.youtube-channel {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
 }
 
-.more__content {
+.video-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video iframe {
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
     gap: 20px;
 }
 
@@ -487,7 +516,7 @@ header {
     margin: 50px auto;
     padding: 20px;
     background: #E8DAD1;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -557,13 +586,14 @@ header {
 
 /* Footer */
 footer {
-    background: #1D1D1F;
-    color: #E8DAD1;
+    background: #E8DAD1;
+    color: #1D1D1F;
     font-size: 0.8rem;
     padding: 20px 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: center;
 }
 
 .footer-section {
@@ -575,12 +605,12 @@ footer {
 .footer-section h3 {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: #E8DAD1;
+    color: #1D1D1F;
     text-align: left;
 }
 
 footer a {
-    color: #E8DAD1;
+    color: #1D1D1F;
     text-decoration: none;
     margin: 0 10px;
     text-align: left;
@@ -616,19 +646,21 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 3.5rem; /* Scale h1 for tablet screens */
+        font-size: 3.5rem; 
       }
     
       h2 {
-        font-size: 2.5rem; /* Adjust h2 for tablet screens */
+        font-size: 2.5rem; 
       }
     
       h3 {
-        font-size: 2rem; /* Adjust h3 for tablet screens */
+        font-size: 2rem; 
       }
 
-
-}
+      h4 {
+        font-size: 1.5rem; 
+      }
+    }
 
 /* Large Screens (Desktop) */
 @media (min-width: 1024px) {
@@ -646,6 +678,9 @@ footer a:hover {
     .projectpage__split img {
         max-width: 300px; 
     }
+    .videos {
+        flex-direction: row;
+    }
 
     body {
         font-size: 1.2rem; 
@@ -662,4 +697,38 @@ footer a:hover {
       h3 {
         font-size: 2.2rem; 
       }
+      h4 {
+        font-size: 1.7rem; 
+      }
+}
+
+@media (max-width: 580px) {
+
+    .nav__links {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .nav__links a {
+        font-size: 0.9rem; 
+        padding: 5px; 
+    }
+
+    .header__nav {
+        padding: 10px;
+        justify-content: center;
+    }
+    .with-fixed-header {
+        padding-top: 200px; 
+    }
+
+    .header__logo {
+        display: none; 
+    }
+
+    .video iframe {
+        width: 100%; /* Full width for mobile */
+        max-width: none; /* Remove any maximum width restriction */
+        border-radius: 5px; /* Slightly smaller border radius */
+    }
 }
